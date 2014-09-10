@@ -9,12 +9,16 @@
         <div class="main">
         <h1>猫眼电影《心花路放》独家预售火热开启</h1>
         <div class="content">
-            <div class="map">
-                <span class="twinkle"></span>
+            <div class="map twinkle">
+                <span class="tw-1"></span>
+                <span class="tw-2"></span>
+                <span class="tw-3"></span>
+                <span class="tw-4"></span>
             </div>
             <div class="column">
                 <var>10000</var>
-                <div id="progress_bar" class="progress-bar">
+                <div id="progress_bar" class="progress">
+                    <div class="progress-bar"></div>
                 </div>
                 <div class="line"></div>
             </div>
@@ -22,4 +26,92 @@
         <footer>猫眼电影</footer>
         </div>
     </body>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.twinkle-0.8.0.min.js"></script>
+    <script>
+        var option1 = {
+            "effectOptions": {
+            "color": "#ef7239",
+            "radius": 30
+            }
+        },
+        option2 = {
+            "effectOptions": {
+            "color": "#1da9d8",
+            "radius": 30
+            }
+        },
+        option3 = {
+            "effectOptions": {
+            "color": "#ffd36e",
+            "radius": 30
+            }
+        },
+        option4 = {
+            "effectOptions": {
+            "color": "#9bce59",
+            "radius": 30
+            }
+        },
+        flicker1 = function() {
+            $(".tw-1").twinkle(option1);
+            
+        },
+        flicker2 = function() {
+            
+            $(".tw-2").twinkle(option2);    
+            
+        },
+
+        flicker3 = function() {
+            
+            $(".tw-3").twinkle(option3);    
+            
+        },
+        flicker4 = function() {
+            
+            $(".tw-4").twinkle(option4);        
+        },
+        Tween = {
+            Quad: {
+                easeOut: function(t,b,c,d){
+                    return c*t/d + b;
+                }
+            }
+        },
+        t = 0,
+        b = 0,
+        c = 10,
+        d = 10000,
+        speed = 3,
+        Run = function(){
+           height = Tween.Quad.easeOut(t,b,c,d);    
+           t++; 
+           // console.log(height);
+           // console.log(currentheight-height);
+          
+           $(".progress-bar").css("height",350-height/speed);
+           if(t<=d) {
+             setInterval(Run,1000);
+           } else {
+             return false;
+           }
+           
+        };
+
+
+
+        document.onkeydown=function(event){
+            var e = event || window.event || arguments.callee.caller.arguments[0];    
+            if(e && e.keyCode==13){ // 按 Enter
+                 setInterval(flicker2,1050);
+                 setInterval(flicker3,1650);
+                 setInterval(flicker1,1350);
+                 setInterval(flicker4,1950);
+                 Run();
+            }            
+        }; 
+        
+        
+    </script>
 </html>
