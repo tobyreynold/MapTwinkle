@@ -34,7 +34,7 @@ body {
 }
 
 h1 {
-     margin-top: 42px;
+    margin-top: 42px;
     color: #a7adb9;
     font-size: 52px;
     margin-bottom: 128px;
@@ -42,7 +42,7 @@ h1 {
 }
 
 .content {
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .map {
     float: left;
@@ -57,6 +57,8 @@ h1 {
     width: 450px;
     height: 423px;
     background-color: #1e2128;
+    text-align: center;
+    position: relative;
 }
 
 footer {
@@ -64,7 +66,9 @@ footer {
     text-align: center;
     color: #FFF;
     height: 34px;
-    margin: 96px 0 32px;
+    width: 160px;
+    margin: 96px auto 32px;
+    background: url(../img/maoyan_logo.png) no-repeat;
 }
 
 .twinkle span{
@@ -79,39 +83,42 @@ footer {
 }
 
 
-.tw-1 {
+.twinkle .flicker1 {
     background-color: #ef7239;
-    top: 90px;
-    left: 90px;
 }
 
-.tw-2 {
+.twinkle .flicker2 {
     background-color: #1da9d8;
-    top: 140px;
-    left: 140px;
 }
 
-.tw-3 {
+.twinkle .flicker3 {
     background-color: #ffd36e;
-    top: 190px;
-    left: 190px;
 }
 
-.tw-4 {
-   background-color: #9bce59;
-   top: 240px;
-   left: 240px;
+.twinkle .flicker4 {
+    background-color: #9bce59;
+}
+var {
+    font-size: 61px;
+    color: #a7adb9;
+    position: absolute;
+    top: -77px;
+    left: 135px;
+    width: 170px;
+    height: 73px;
+    display: inline-block;
 }
 
 .progress {
-    height: 350px;
+    margin: 0 auto;
+    height: 400px;
     width: 50px;
     background: #ef7239;
 }
 
 
 .progress-bar {
-    height: 350px;
+    height: 400px;
     width: 100%;
     background: #1e2128;
 }
@@ -227,11 +234,9 @@ footer {
     top: 160px;
 }
 
-.twinkle .beijing {
-    width: 6px;
-    height: 6px;
-    left: 379px;
-    top: 156px;
+.beijing {
+    left: 380px;
+    top: 158px;
 }
 
 .heilongjiang {
@@ -368,19 +373,6 @@ footer {
     left: 423px;
     top: 255px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @keyframes twinkle {
     0%   { opacity: 0; }
