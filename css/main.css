@@ -46,17 +46,17 @@ h1 {
 }
 .map {
     float: left;
-    width: 60%;
-    height: 400px;
-    background-color: #efefef;
+    width: 510px;
+    height: 423px;
     position: relative;
+    background: url(../img/map.png) #1e2128 no-repeat;
 }
 
 .column {
     float: left;
-    width: 40%;
-    height: 400px;
-    background-color: #333;
+    width: 450px;
+    height: 423px;
+    background-color: #1e2128;
 }
 
 footer {
@@ -70,8 +70,8 @@ footer {
 .twinkle span{
     position:absolute;
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 3px;
+    height: 3px;
     border-radius: 100%;
 /*    animation: twinkle 3s linear 1s infinite alternate;
     -moz-animation: twinkle 3s linear 1s infinite alternate;
@@ -94,13 +94,13 @@ footer {
 .tw-3 {
     background-color: #ffd36e;
     top: 190px;
-    left: 190px;   
+    left: 190px;
 }
 
 .tw-4 {
-   background-color: #9bce59; 
+   background-color: #9bce59;
    top: 240px;
-   left: 240px;   
+   left: 240px;
 }
 
 .progress {
@@ -113,9 +113,273 @@ footer {
 .progress-bar {
     height: 350px;
     width: 100%;
-    background: #333;
+    background: #1e2128;
 }
- 
+
+.xinjiang {
+    left: 135px;
+    top: 102px;
+}
+
+.qinghai {
+    left: 238px;
+    top: 198px;
+}
+
+.gansu {
+    left: 266px;
+    top: 208px;
+}
+
+.sichuan {
+    left: 263px;
+    top: 275px;
+}
+
+.yunnan {
+    left: 251px;
+    top: 343px;
+}
+
+.chongqing {
+    left: 307px;
+    top: 281px;
+}
+
+.guizhou {
+    left: 300px;
+    top: 323px;
+}
+
+.guangxi {
+    left: 315px;
+    top: 363px;
+}
+
+.guangdong {
+    left: 367px;
+    top: 358px;
+}
+
+.guangdong1 {
+    left: 371px;
+    top: 359px;
+}
+
+.guangdong2 {
+    left: 375px;
+    top: 365px;
+}
+
+
+.hainan {
+    left: 336px;
+    top: 400px;
+}
+
+.hunan {
+    left: 348px;
+    top: 300px;
+}
+
+.hubei {
+    left:374px;
+    top:273px;
+}
+
+.shaanxi {
+    left: 316px;
+    top: 233px;
+}
+
+.shanxi {
+    left: 350px;
+    top: 192px;
+}
+
+.jiangxi {
+    left: 388px;
+    top: 293px;
+}
+
+.ningxia {
+    left: 289px;
+    top: 184px;
+}
+
+.neimeng {
+    left: 340px;
+    top: 149px;
+}
+
+.hebei {
+    left: 366px;
+    top: 181px;
+}
+
+.tianjin {
+    left: 389px;
+    top: 167px;
+}
+
+.hebei1 {
+    left: 398px;
+    top: 160px;
+}
+
+.twinkle .beijing {
+    width: 6px;
+    height: 6px;
+    left: 379px;
+    top: 156px;
+}
+
+.heilongjiang {
+    left: 451px;
+    top: 74px;
+}
+
+.jilin {
+    left: 442px;
+    top: 101px;
+}
+
+.liaoning {
+    left: 435px;
+    top: 136px;
+}
+
+.liaoning1 {
+    left: 433px;
+    top: 156px;
+}
+
+.henan {
+    left: 349px;
+    top: 232px;
+}
+
+.henan1 {
+    left: 363px;
+    top: 220px;
+}
+
+.shandong {
+    left: 384px;
+    top: 203px;
+}
+
+.shandong1 {
+    left: 411px;
+    top: 208px;
+}
+
+.shandong2 {
+    left: 407px;
+    top: 195px;
+}
+
+.shandong3 {
+    left: 427px;
+    top: 185px;
+}
+
+.anhui {
+    left: 392px;
+    top: 233px;
+}
+
+.anhui1 {
+    left: 410px;
+    top: 260px;
+}
+
+.fujian {
+    left: 424px;
+    top: 326px;
+}
+
+.fujian1 {
+    left: 428px;
+    top: 319px;
+}
+
+.fujian2 {
+    left: 420px;
+    top: 334px;
+}
+
+.shanghai {
+    left: 439px;
+    top: 254px;
+}
+
+.zhejiang {
+    left: 438px;
+    top: 290px;
+}
+
+.zhejiang1 {
+    left: 441px;
+    top: 271px;
+}
+
+.zhejiang2 {
+    left: 426px;
+    top: 274px;
+}
+
+.zhejiang3 {
+    left: 426px;
+    top: 261px;
+}
+
+.zhejiang4 {
+    left: 431px;
+    top: 263px;
+}
+
+.jiangsu {
+    left: 432px;
+    top: 245px;
+}
+
+.jiangsu1 {
+    left: 418px;
+    top: 236px;
+}
+
+.jiangsu2 {
+    left: 420px;
+    top: 246px;
+}
+
+.jiangsu3 {
+    left: 420px;
+    top: 246px;
+}
+
+.jiangsu4 {
+    left: 414px;
+    top: 248px;
+}
+
+.jiangsu5 {
+    left: 423px;
+    top: 255px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @keyframes twinkle {

@@ -10,10 +10,70 @@
         <h1>猫眼电影《心花路放》独家预售火热开启</h1>
         <div class="content">
             <div class="map twinkle">
-                <span class="tw-1"></span>
-                <span class="tw-2"></span>
-                <span class="tw-3"></span>
-                <span class="tw-4"></span>
+                <span class="tw-1 xinjiang"></span>
+                <span class="tw-2 qinghai"></span>
+                <span class="tw-3 gansu"></span>
+                <span class="tw-4 sichuan"></span>
+                <span class="tw-1 yunnan"></span>
+                <span class="tw-2 ningxia"></span>
+                <span class="tw-3 shaanxi"></span>
+                <span class="tw-4 chongqing"></span>
+                <span class="tw-1 guizhou"></span>
+                <span class="tw-2 guangxi"></span>
+                <span class="tw-3 guangdong"></span>
+                <span class="tw-4 guangdong1"></span>
+                <span class="tw-1 guangdong2"></span>
+                <span class="tw-2 guangdong3"></span>
+                <span class="tw-3 hunan"></span>
+                <span class="tw-4 hubei"></span>
+                <span class="tw-1 fujian"></span>
+                <span class="tw-2 fujian1"></span>
+                <span class="tw-3 fujian2"></span>
+                <span class="tw-4 anhui"></span>
+                <span class="tw-1 anhui1"></span>
+                <span class="tw-2 shanghai"></span>
+                <span class="tw-3 henan"></span>
+                <span class="tw-4 henan1"></span>
+                <span class="tw-1 hebei"></span>
+                <span class="tw-2 hebei1"></span>
+                <span class="tw-3 beijing"></span>
+                <span class="tw-4 tianjin"></span>
+                <span class="tw-1 shandong"></span>
+                <span class="tw-2 shandong1"></span>
+                <span class="tw-3 shandong2"></span>
+                <span class="tw-4 shandong3"></span>
+                <span class="tw-1 shanxi"></span>
+                <span class="tw-2 neimeng"></span>
+                <span class="tw-3 jiangsu"></span>
+                <span class="tw-4 jiangsu1"></span>
+                <span class="tw-1 jiangsu2"></span>
+                <span class="tw-2 jiangsu3"></span>
+                <span class="tw-3 jiangsu4"></span>
+                <span class="tw-1 jiangsu5"></span>
+                <span class="tw-4 zhejiang"></span>
+                <span class="tw-1 zhejiang1"></span>
+                <span class="tw-2 zhejiang2"></span>
+                <span class="tw-3 zhejiang3"></span>
+                <span class="tw-4 zhejiang4"></span>
+                <!-- <span class="tw-1 zhejiang1"></span> -->
+                <!-- <span class="tw-2 zhejiang2"></span> -->
+                <span class="tw-3 hainan"></span>
+                <span class="tw-4 liaoning"></span>
+                <span class="tw-1 liaoning1"></span>
+                <span class="tw-2 jilin"></span>
+                <span class="tw-3 heilongjiang"></span>
+                <span class="tw-4 hainan"></span>
+                <span class="tw-1 jiangxi"></san>
+                <!-- <span class="tw-1 "></span>
+                <span class="tw-2 "></span>
+                <span class="tw-3 "></span>
+                <span class="tw-4 "></span>
+                <span class="tw-1 "></span>
+                <span class="tw-2 "></span>
+                <span class="tw-3 "></span>
+                <span class="tw-4 "></span>-->
+
+
             </div>
             <div class="column">
                 <var>10000</var>
@@ -32,45 +92,45 @@
         var option1 = {
             "effectOptions": {
             "color": "#ef7239",
-            "radius": 30
+            "radius": 8
             }
         },
         option2 = {
             "effectOptions": {
             "color": "#1da9d8",
-            "radius": 30
+            "radius": 8
             }
         },
         option3 = {
             "effectOptions": {
             "color": "#ffd36e",
-            "radius": 30
+            "radius": 8
             }
         },
         option4 = {
             "effectOptions": {
             "color": "#9bce59",
-            "radius": 30
+            "radius": 8
             }
         },
         flicker1 = function() {
             $(".tw-1").twinkle(option1);
-            
+
         },
         flicker2 = function() {
-            
-            $(".tw-2").twinkle(option2);    
-            
+
+            $(".tw-2").twinkle(option2);
+
         },
 
         flicker3 = function() {
-            
-            $(".tw-3").twinkle(option3);    
-            
+
+            $(".tw-3").twinkle(option3);
+
         },
         flicker4 = function() {
-            
-            $(".tw-4").twinkle(option4);        
+
+            $(".tw-4").twinkle(option4);
         },
         Tween = {
             Quad: {
@@ -83,35 +143,35 @@
         b = 0,
         c = 10,
         d = 10000,
-        speed = 3,
+        speed = 1,
         Run = function(){
-           height = Tween.Quad.easeOut(t,b,c,d);    
-           t++; 
+           height = Tween.Quad.easeOut(t,b,c,d);
+           t++;
            // console.log(height);
            // console.log(currentheight-height);
-          
+
            $(".progress-bar").css("height",350-height/speed);
            if(t<=d) {
              setInterval(Run,1000);
            } else {
              return false;
            }
-           
+
         };
 
 
 
         document.onkeydown=function(event){
-            var e = event || window.event || arguments.callee.caller.arguments[0];    
+            var e = event || window.event || arguments.callee.caller.arguments[0];
             if(e && e.keyCode==13){ // 按 Enter
                  setInterval(flicker2,1050);
                  setInterval(flicker3,1650);
                  setInterval(flicker1,1350);
                  setInterval(flicker4,1950);
                  Run();
-            }            
-        }; 
-        
-        
+            }
+        };
+
+
     </script>
 </html>
