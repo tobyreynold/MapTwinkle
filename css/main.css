@@ -113,7 +113,7 @@ var {
     margin: 0 auto;
     height: 400px;
     width: 50px;
-    background: #ef7239;
+    background: #a8aeb9;
 }
 
 
@@ -124,10 +124,10 @@ var {
 }
 
 .line {
-    width: 180px; 
+    width: 180px;
     height: 2px;
     display: inline-block;
-    background:#a7adb9; 
+    background:#7c8390;
 }
 
 .xinjiang {
