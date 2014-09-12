@@ -16,9 +16,9 @@
                 <span class="sichuan flicker2"></span>
                 <span class="yunnan flicker3"></span>
                 <span class="ningxia flicker4"></span>
-                <span class="shaanxi flicker4"></span>
-                <span class="chongqing flicker2"></span>
-                <span class="guizhou flicker3"></span>
+                <span class="shaanxi flicker3"></span>
+                <span class="chongqing flicker3"></span>
+                <span class="guizhou flicker2"></span>
                 <span class="guangxi flicker4"></span>
                 <span class="guangdong flicker1"></span>
                 <span class="guangdong1 flicker3"></span>
@@ -33,7 +33,7 @@
                 <span class="shanghai flicker1"></span>
                 <span class="henan flicker2"></span>
                 <span class="henan1 flicker4"></span>
-                <span class="hebei flicker3"></span>
+                <span class="hebei flicker2"></span>
                 <span class="hebei1 flicker2"></span>
                 <span class="beijing flicker1"></span>
                 <span class="tianjin flicker4"></span>
@@ -63,7 +63,7 @@
                 <span class="jiangxi flicker4"></span>
             </div>
             <div class="column">
-                <var>20000</var>
+                <var id="number">0</var>
                 <div id="progress_bar" class="progress">
                     <div class="progress-bar"></div>
                 </div>
@@ -122,38 +122,48 @@
         Tween = {
             Quad: {
                 easeOut: function(t,b,c,d){
-                    return c*t/d + b;
+                    return c*t/d + b;;
                 }
             }
         },
-        t = 0,
+        t = 2000,
         b = 0,
         c = 10,
         d = 10000,
         processBar = $(".progress-bar"),
+        process = $("#progress_bar"),
         speed = 1,
+        currentHeight,
+        numbe = $("#number"),
+        number = numbe.text(),
         Run = function(){
            height = Tween.Quad.easeOut(t,b,c,d);
            t++;
-           // console.log(height);
-           // console.log(currentheight-height);
-           processBar.css("height",400-height/speed);
+           currentHeight = 399-height/speed;
+           processBar.css("height",currentHeight);
+           if(currentHeight<90 &&currentHeight>89) {
+            process.css("background-color","#fb4d4f");
+           }
            if(t<=d) {
-             setInterval(Run,1000);
+                setInterval(Run,950);
            } else {
              return false;
            }
-
+        },
+        updateNum = function(){
+            number = number*1 + 5 ;
+            numbe.text(number);
         };
 
         document.onkeydown=function(event){
             var e = event || window.event || arguments.callee.caller.arguments[0];
             if(e && e.keyCode==13){ // 按 Enter
-                 setInterval(flicker2,1050);
-                 setInterval(flicker3,1650);
-                 setInterval(flicker1,1350);
-                 setInterval(flicker4,1950);
+                 setInterval(flicker2,1350);
+                 setInterval(flicker3,1050);
+                 setInterval(flicker1,800);
+                 setInterval(flicker4,1650);
                  Run();
+                 setInterval(updateNum,10);
             }
         };
 
