@@ -123,6 +123,13 @@ var {
     background: #1e2128;
 }
 
+.line {
+    width: 180px; 
+    height: 2px;
+    display: inline-block;
+    background:#a7adb9; 
+}
+
 .xinjiang {
     left: 135px;
     top: 102px;
