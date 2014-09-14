@@ -141,7 +141,7 @@
            t++;
            currentHeight = 399-height/speed;
            processBar.css("height",currentHeight);
-           if(currentHeight<90 &&currentHeight>89) {
+           if(currentHeight<80 &&currentHeight>79) {
             process.css("background-color","#fb4d4f");
            }
            if(t<=d) {
@@ -151,7 +151,14 @@
            }
         },
         updateNum = function(){
-            number = number*1 + 5 ;
+            if (number>890 && number<20000) {
+                number = number*1 + 7 ;
+            } else if (number>20000) {
+                number = number*1 + 3 ;
+            } else {
+               number = number*1 + 1 ; 
+            }
+
             numbe.text(number);
         };
 
