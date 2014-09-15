@@ -39,6 +39,7 @@ h1 {
     font-size: 52px;
     margin-bottom: 128px;
     text-align: center;
+    font-family: 'Microsoft YaHei';
 }
 
 .content {
@@ -107,6 +108,7 @@ var {
     width: 170px;
     height: 73px;
     display: inline-block;
+    font-family: 'Arial';
 }
 
 .progress {
