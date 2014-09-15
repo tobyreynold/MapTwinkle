@@ -76,6 +76,7 @@
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/jquery.twinkle-0.8.0.min.js"></script>
     <script>
+    ;(function(window) {
         var option1 = {
             "effectOptions": {
             "color": "#ef7239",
@@ -100,24 +101,21 @@
             "radius": 8
             }
         },
+        twinkle1 = $(".flicker1"),
+        twinkle2 = $(".flicker2"),
+        twinkle3 = $(".flicker3"),
+        twinkle4 = $(".flicker4"),
         flicker1 = function() {
-            $(".flicker1").twinkle(option1);
-
+            twinkle1.twinkle(option1);
         },
         flicker2 = function() {
-
-            $(".flicker2").twinkle(option2);
-
+            twinkle2.twinkle(option2);
         },
-
         flicker3 = function() {
-
-            $(".flicker3").twinkle(option3);
-
+            twinkle3.twinkle(option3);
         },
         flicker4 = function() {
-
-            $(".flicker4").twinkle(option4);
+            twinkle4.twinkle(option4);
         },
         Tween = {
             Quad: {
@@ -141,7 +139,7 @@
            t++;
            currentHeight = 399-height/speed;
            processBar.css("height",currentHeight);
-           if(currentHeight<80 &&currentHeight>79) {
+           if(currentHeight<100 &&currentHeight>99) {
             process.css("background-color","#fb4d4f");
            }
            if(t<=d) {
@@ -156,7 +154,7 @@
             } else if (number>20000) {
                 number = number*1 + 3 ;
             } else {
-               number = number*1 + 1 ; 
+               number = number*1 + 1 ;
             }
 
             numbe.text(number);
@@ -173,7 +171,6 @@
                  setInterval(updateNum,10);
             }
         };
-
-
+    })(window);
     </script>
 </html>
