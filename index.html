@@ -77,99 +77,98 @@
     <script src="js/jquery.twinkle-0.8.0.min.js"></script>
     <script>
     ;(function(window) {
-        var option1 = {
-            "effectOptions": {
-            "color": "#ef7239",
-            "radius": 15
-            }
-        },
-        option2 = {
-            "effectOptions": {
-            "color": "#1da9d8",
-            "radius": 8
-            }
-        },
-        option3 = {
-            "effectOptions": {
-            "color": "#ffd36e",
-            "radius": 8
-            }
-        },
-        option4 = {
-            "effectOptions": {
-            "color": "#9bce59",
-            "radius": 8
-            }
-        },
-        twinkle1 = $(".flicker1"),
-        twinkle2 = $(".flicker2"),
-        twinkle3 = $(".flicker3"),
-        twinkle4 = $(".flicker4"),
-        flicker1 = function() {
-            twinkle1.twinkle(option1);
-        },
-        flicker2 = function() {
-            twinkle2.twinkle(option2);
-        },
-        flicker3 = function() {
-            twinkle3.twinkle(option3);
-        },
-        flicker4 = function() {
-            twinkle4.twinkle(option4);
-        },
-        Tween = {
-            Quad: {
-                easeOut: function(t,b,c,d){
-                    return c*t/d + b;;
-                }
-            }
-        },
-        t = 2000,
-        b = 0,
-        c = 10,
-        d = 10000,
-        processBar = $(".progress-bar"),
-        process = $("#progress_bar"),
-        speed = 1,
-        currentHeight,
-        numbe = $("#number"),
-        number = numbe.text(),
-        Run = function(){
+    var option1 = {
+           "effectOptions": {
+               "color": "#ef7239",
+               "radius": 15
+           }
+       },
+       option2 = {
+           "effectOptions": {
+               "color": "#1da9d8",
+               "radius": 8
+           }
+       },
+       option3 = {
+           "effectOptions": {
+               "color": "#ffd36e",
+               "radius": 8
+           }
+       },
+       option4 = {
+           "effectOptions": {
+               "color": "#9bce59",
+               "radius": 8
+           }
+       },
+       twinkle1 = $(".flicker1"),
+       twinkle2 = $(".flicker2"),
+       twinkle3 = $(".flicker3"),
+       twinkle4 = $(".flicker4"),
+       flicker1 = function() {
+           twinkle1.twinkle(option1);
+       },
+       flicker2 = function() {
+           twinkle2.twinkle(option2);
+       },
+       flicker3 = function() {
+           twinkle3.twinkle(option3);
+       },
+       flicker4 = function() {
+           twinkle4.twinkle(option4);
+       },
+       Tween = {
+           Quad: {
+               easeOut: function(t,b,c,d){
+                   return c*t/d + b;;
+               }
+           }
+       },
+       t = 2000,
+       b = 0,
+       c = 10,
+       d = 10000,
+       processBar = $(".progress-bar"),
+       process = $("#progress_bar"),
+       speed = 1,
+       currentHeight,
+       numbe = $("#number"),
+       number = numbe.text(),
+       Run = function(){
            height = Tween.Quad.easeOut(t,b,c,d);
            t++;
            currentHeight = 399-height/speed;
            processBar.css("height",currentHeight);
            if(currentHeight<100 &&currentHeight>99) {
-            process.css("background-color","#fb4d4f");
+               process.css("background-color","#fb4d4f");
            }
            if(t<=d) {
-                setInterval(Run,950);
+               setInterval(Run,950);
            } else {
-             return false;
+               return false;
            }
-        },
-        updateNum = function(){
-            if (number>890 && number<20000) {
-                number = number*1 + 7 ;
-            } else if (number>20000) {
-                number = number*1 + 3 ;
-            } else {
+       },
+       updateNum = function(){
+           if (number>1000 && number<20000) {
+               number = number*1 + 7 ;
+           } else if (number>20000) {
+               number = number*1 + 3 ;
+           } else {
                number = number*1 + 1 ;
-            }
+           }
 
-            numbe.text(number);
-        };
-
+           numbe.text(number);
+       };
         document.onkeydown=function(event){
-            var e = event || window.event || arguments.callee.caller.arguments[0];
-            if(e && e.keyCode==13){ // 按 Enter
-                 setInterval(flicker2,1350);
-                 setInterval(flicker3,1050);
-                 setInterval(flicker1,800);
-                 setInterval(flicker4,1650);
-                 Run();
-                 setInterval(updateNum,10);
-            }
+       var e = event || window.event || arguments.callee.caller.arguments[0];
+       if(e && e.keyCode==13){ // 按 Enter
+           setInterval(flicker2,1350);
+           setInterval(flicker3,1050);
+           setInterval(flicker1,800);
+           setInterval(flicker4,1650);
+           Run();
+           setInterval(updateNum,10);
+        }
         };
     })(window);
     </script>
